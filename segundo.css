@@ -1,0 +1,89 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    box-shadow: black 10px 5px 5px ;
+    
+}
+header p{
+    margin-left: 2%;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
+}
+h1{
+    
+    font-size: 20px;
+}
+main{
+    margin-left: 3%;
+}
+body p{
+
+    font-size: 12px;
+}
+
+fieldset{
+    margin-top: 2%;
+    border-color: black;
+    width:40%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+legend{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+label{
+    font-weight: bold;
+    font-size: 11.5px;
+    margin-bottom: 1%;
+}
+/* input fieldset{
+    width:50%;
+} */
+
+footer{
+    margin-top: 3%;
+   padding-left: 6%;
+    padding-bottom: 2.9%;
+    padding-top: 1%;
+    background-color:#000000;
+    color: white;
+    position:relative;
+    margin-bottom: 0%;
+    font-size: 11px;
+}
+footer p{
+  
+    margin-left: 3%;
+}
+
+#boton{
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    padding: 5px;
+}
+
+.margeniz{
+    margin-left: 3%;
+}
+#tamaño{
+    font-size: 9px;
+}
+#ciudad, #calle_numero,#provincia, #postal, #pais{
+    width:95%;
+}
+#checkb{
+    font-size: 8px;
+}
+p:first-of-type {
+    
+    margin-right: 15%;
+  }

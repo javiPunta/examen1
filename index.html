@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios 2</title>
+    <style>
+      input:valid {
+        border-color: rgb(7, 206, 7);
+      }
+
+      input:invalid {
+        border-color: rgb(255, 0, 0);
+      }
+
+      input[pattern]:invalid {
+        color: crimson;
+      }
+
+      input[pattern]:valid {
+        color: green;
+      }
+      /* #email:focus,
+    #edad:focus,
+    #nombre:focus {
+      /* autofocus=”on” para que se te ponga el color siempre */
+      /* background-color: aqua;
+    } */
+    </style>
+  </head>
+
+  <body>
+    <!-- NAME ES OBLIGATORIO PONERLO -->
+    <form>
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="sueldo"
+          >Sueldo:
+          <input
+            type="number"
+            id="sueldo"
+            min="0.00"
+            max="9999.99"
+            step="0.01"
+            placeholder="Ej: 1234.99"
+            title="Solo se aceptan valores númericos."
+          />€</label
+        ><br /><br />
+        <!-- mirar maxleng en sueldo -->
+        <label for="tlf">Nº de teléfono: </label>
+        <input
+          type="text"
+          id="tlf"
+          required="required"
+          autocomplete="on"
+          pattern="[0-9]{9}|[0-9]{3}-[0-9]{6}"
+          maxlength="9"
+          placeholder="Ej: 123456789 o 123-123456"
+          title="Solo se aceptan valores númericos."
+        /><br /><br />
+        <!-- 9 números o 3 números - opcional y 6 números -->
+        <!-- si es con - en maxleng tienes que aumentar uno mas? -->
+        <label for="barras">Código de barras: </label>
+        <input
+          type="text"
+          id="barras"
+          autocomplete="off"
+          pattern="[0-9]{13}"
+          maxlength="13"
+          placeholder="Ej: 123456789 o 123-123456"
+          title="Solo se aceptan valores númericos."
+        /><br /><br />
+        <!-- opcional es solo sin requiered?? -->
+        <label for="binario">Nº binario: </label>
+        <input
+          type="text"
+          id="binario"
+          autocomplete="off"
+          pattern="[0|1]{8}"
+          maxlength="8"
+          placeholder="Ej: 01010101"
+          title="Solo se aceptan valores númericos entre 0 y 1."
+        /><br /><br />
+        <!-- opcional -->
+        <label for="color">Color html hexadecimal: </label>
+        <input type="text" id="color" title="Solo se aceptan valores númericos y
+        letras de la A a la F." required="required" autocomplete="on"
+        pattern="^#[0-9|a-f|A-F]{6}" maxlength="6" placeholder="Ej: #DEF123"> <br /><br />
+        <!-- hace falta poner value="#"? -->
+        <!-- #0 a 9 o a a f o A a F 6 veces
+        Value #
+Ejemplo #DEF123 -->
+        <!-- (También se puede poner una label con # y recoger solo los 6 dígitos hexadecimales.) -->
+        <label for="octal">Nº octal: </label>
+        <input
+          type="text"
+          id="octal"
+          autocomplete="off"
+          pattern="[0-8]{9}"
+          maxlength="9"
+          placeholder="012345678"
+          title="Solo se aceptan valores númericos entre 0 y 8."
+        /><br /><br />
+        <!-- opcional -->
+        <label for="matricula">Código Matrícula: </label>
+        <input
+          type="text"
+          id="matricula"
+          name="codigo_matricula"
+          required="required"
+          autocomplete="on"
+          pattern="[0-9a-zA-Z-]{1,}"
+          placeholder="M7777F o SE-3443-AF o 8888-GTG"
+          title="Solo se aceptan valores númericos y caracteres en mayúsculas."
+        />
+        <!-- que maxleng se pone aqui -->
+        <br /><br />
+        <input type="radio" title="mnueva" name="matricula" id="nueva" />
+        <label for="nueva">Matrícula Nueva</label>
+
+        <input type="radio" title="mantigua" name="matricula" id="antigua" />
+        <label for="antigua">Matrícula Antigua</label>
+        <!-- Poner también que el - sea opcional
+	Las letras pueden ser mayúsculas o minúsculas
+	M7777F	
+	SE-3443-AF
+	8888-GTG
+	1234DDD -->
+        <br /><br />
+        <label for="banco">Nº cuenta banco: </label>
+
+        
+        
+        <label for="iban">IBAN: </label>
+        <input
+          type="text"
+          id="iban"
+          title="nº_cuenta_banco_IBAN"
+          name="nº_cuenta_banco_IBAN"
+          pattern="[a-zA-Z]{2}[0-9]{2} ?[0-9]{4} ?"
+        />
+        <label for="ccc">CCC: </label>
+        <input
+          type="text"
+          title="nº_cuenta_banco_CCC"
+          name="nº_cuenta_banco_CCC"
+          id="ccc"
+          
+          pattern="[0-9]{2}"
+        />
+        <!-- IBAN		2 letras y 22 números
+			2 letras y 2 números, blanco opcional, y repetir 5 veces 4 					números, blanco opcional
+	CCC		20 números -->
+        <br />
+        <br />
+        <label for="provincia">Provincia</label>
+        <input
+          type="text"
+          id="provincia"
+          title="provincia"
+          name="Provincia"
+          list="provincias"
+        />
+
+        <datalist id="provincias">
+          <option value="Cádiz"></option>
+          <option value="Sevilla"></option>
+          <option value="Huelva"></option>
+        </datalist>
+
+        <!-- pero que además podemos añadir otra.  -->
+      
+      </fieldset>
+      <br /><br />
+      <input
+        type="submit"
+        title="boton_enviar"
+        name="boton_enviar"
+        value="Enviar"
+      />
+
+      <input
+        type="reset"
+        title="boton_borrar"
+        name="boton_borrar"
+        value="Borrar"
+      />
+    </form>
+  </body>
+</html>

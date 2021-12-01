@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="segundo.css" />
+    <title>SEGUNDA</title>
+  </head>
+  <body>
+    <header>
+      <p>petinder</p>
+      <!-- añadir sombra mas negrita -->
+    </header>
+    <main>
+      <h1>Hazte socio</h1>
+      <p id="margen">
+        Colabora con Petinder Haciéndote por sólo 15 euros mensuales. Con muy
+        poco puedes ayudar a nuestros amigos peludos. Además puedes comprar
+        nuestra exclusiva camiseta por solo 10 euros que se añadirá al primer
+        pago. Rellena el siguiente formulario para unirte a nosotros:
+      </p>
+      <form>
+        <fieldset>
+          <legend>Dirección</legend>
+          <label for="calle_numero">Calle y número *</label><br />
+          <input type="text" id="calle_numero" required="required"  placeholder="Calle y número" title="Debes escribir el nombre de la calle y luego su número."/><br />
+          <br>
+          <label for="ciudad">Ciudad *</label><br />
+          <input type="text" id="ciudad" required="required" placeholder="Ciudad" title="Introduzca el nombre de su ciudad."/><br />
+          <br>
+          <label for="provincia">Provincia *</label><br />
+          <input type="text" id="provincia" required="required" placeholder="Provincia" title="Introduzca el nombre de su provincia"/><br />
+          <br>
+          <label for="postal"  placeholder="">Código postal *</label><br />
+          <input type="text" id="postal" required="required" pattern="[0-9]{5}" maxlength="5" placeholder="Código Postal" title="Introduzca el código postal"/><br />
+          <br>
+          <label for="pais">País</label><br />
+          <select name="paises" id="pais" title="Debes seleccionar un país.">
+            <option value="seleccionar">Seleccionar</option>
+            <option value="españa">España</option>
+            <option value="españa">España</option>
+            <option value="portugal">Portugal</option>
+          </select>
+        </fieldset>
+        <p class="margeniz" id="tamaño">*Todos los campos son obligatorios</p>
+        <label for="checkb" class="margeniz"><input type="checkbox" id="checkb" title="suscribir"  name="checkb"/>He leído y acepto la política de privacidad y las condiciones de uso.</label> <br><br>
+        <input
+          type="submit"
+          id="boton"
+          class="margeniz"
+          title="boton_enviar"
+          name="boton_enviar"
+          value="Enviar"
+        />
+      </form>
+    </main>
+    <footer>2021 C Petiner - Francisco Javier Domínguez Santos</footer>
+  </body>
+</html>
